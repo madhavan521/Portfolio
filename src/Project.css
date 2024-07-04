@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.card {
+    width: 80%;
+    height: 30%;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-top: 22px;
+    transition: box-shadow 0.3s ease; /* Added transition for smoother hover effect */
+    
+}
+
+
+.card:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.card__thumb {
+    height: 125px; /* Adjusted height for consistency */
+    overflow: hidden;
+    background-color: smokewhite;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.card__thumb img {
+    width: 90%;
+    display: block;
+    opacity: 1;
+    border-radius: 10px;
+    margin:  15px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card:hover .card__thumb {
+    height: 130px;
+}
+
+.card:hover .card__thumb img {
+    opacity: 0.6;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border-radius: 20px;
+}
+
+.card__body {
+    position: relative;
+    height: 185px;
+    padding: 20px;
+    transition: height 0.5s; /* Added transition for smoother hover effect */
+}
+
+.card:hover .card__body {
+    height: 250px;
+}
+@media (max-width: 767px) {
+    .card:hover .card__body {
+      height: 600px; /* Set the height to 600px when col-12 on small devices */
+    }
+  }
+  
+
+
+.card__title {
+    margin: 0;
+    padding: 0 0 10px 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card__description {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 56px;
+    margin: 0;
+    padding: 0;
+    color: #666C74;
+    line-height: 27px;
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.card:hover .card__description {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+.card__footer {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    right: 20px;
+    font-size: 11px;
+    color: #A3A9A2;
+}
+.card__thumb img {
+    width: 100%; /* Adjusted width to show the image fully */
+    height: auto; /* Ensure aspect ratio is maintained */
+    display: block;
+    opacity: 1;
+    border-radius: 10px;
+    margin: 10px auto;
+    -webkit-transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card:hover .card__thumb img {
+    opacity: 0.6;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 20px;
+}
+.card:hover .card__title{
+    display: none;
+}
